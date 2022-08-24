@@ -153,7 +153,7 @@ cat2.products.create!({
   As a defense mechanism the Tangle Azolla grow slippery leaves to prevent insects from easily eaten them.
   They rely on self pollination to reproduce. Once pollinated, they grow delicious, small fruits.",
   image: open_asset('plante_8.jpg'),
-  quantity: 3,
+  quantity: 0,
   price: 24.99
 })
 
