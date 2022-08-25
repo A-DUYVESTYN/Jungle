@@ -1,6 +1,9 @@
 class AboutController < ApplicationController
 
-def index
-end
+  # restrict this about page to logged in users for testing reasons
+  before_action :authorize
+
+  def index
+  end
 
 end
