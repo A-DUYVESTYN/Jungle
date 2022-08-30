@@ -16,10 +16,10 @@ RSpec.describe Product, type: :model do
           price: 20 
         })
 
-        puts @product.inspect
+        # puts @product.inspect
 
         expect(@product.save).to be_truthy
-        puts @product.inspect
+        # puts @product.inspect
       end
 
       it "Product has a name" do
@@ -31,7 +31,7 @@ RSpec.describe Product, type: :model do
           quantity: 3,
           price: 20 
         })
-        expect(@product.name).to be_present
+        expect(@product).to be_valid
       end
 
       it "Product has a price" do
@@ -43,7 +43,7 @@ RSpec.describe Product, type: :model do
           quantity: 3,
           price: 20 
         })
-        expect(@product.price).to be_present
+        expect(@product).to be_valid
       end
 
       it "Product has a quantity" do
@@ -57,6 +57,18 @@ RSpec.describe Product, type: :model do
         })
 
         expect(@product).to be_valid
+      end
+      it "Product is not valid if quantity is missing" do
+        @category = Category.new({name:"peaches"})
+        @category.save!
+        @product = Product.new({
+          name: "yellow peach",
+          category_id: @category.id,
+          quantity: nil, 
+          price: 20
+        })
+
+        expect(@product).to_not be_valid
       end
 
       it "Product has a category" do
@@ -86,6 +98,5 @@ RSpec.describe Product, type: :model do
       end
 
     end
-
   end
 end
