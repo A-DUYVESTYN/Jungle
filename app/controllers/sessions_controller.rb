@@ -2,6 +2,10 @@
 
 class SessionsController < ApplicationController
   def new
+    if session[:user_id]
+      puts "user_id #{session[:user_id]} is already logged in"
+      redirect_to '/'
+    end
   end
 
   def create

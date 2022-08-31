@@ -9,7 +9,12 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      redirect_to '/signup'
+      @err = user.errors.full_messages
+      puts "unable to save new user. Error Msg:"
+      @err.each do |message| 
+        puts message
+      end
+      render 'new'
     end
   end 
 
