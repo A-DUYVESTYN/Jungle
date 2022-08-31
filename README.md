@@ -2,7 +2,7 @@
 
 A mini e-commerce application for plants, built with Rails 6.1.
 
-features:
+Features:
 - Homepage displays product cards, all or by category
 - Cart and checkout
 - User signup, login, and authentication
@@ -15,12 +15,13 @@ Tech Stack:
 - postgreSQL / Active Record
 - bcrypt/ has_secure_password
 - Sass and bootstrap
-
 Testing
-Feature testing: RSpec 
-Integration testing: Cypress
+- Feature testing: rspec-rails
+- Integration testing: Cypress, cypress-rails, DatabaseCleaner
 
 ## Setup
+
+To get started with Rails 6.1, review the [Rails Guide](http://guides.rubyonrails.org/v6.1/)
 
 1. Run `bundle install` to install dependencies
 2. Create `config/database.yml` by copying `config/database.example.yml`
@@ -30,6 +31,7 @@ Integration testing: Cypress
 6. Sign up for a Stripe account
 7. Put Stripe (test) keys into appropriate .env vars
 8. Run `bin/rails s -b 0.0.0.0` to start the server
+9. Navigate to localhost:3000
 
 ## Database
 
