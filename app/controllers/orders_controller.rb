@@ -6,6 +6,7 @@ class OrdersController < ApplicationController
 
   def create
     charge = perform_stripe_charge
+    puts charge
     order  = create_order(charge)
 
     if order.valid?

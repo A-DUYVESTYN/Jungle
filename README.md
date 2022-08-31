@@ -1,6 +1,24 @@
 # Jungle
 
-A mini e-commerce application built with Rails 6.1 for purposes of teaching Rails by example.
+A mini e-commerce application for plants, built with Rails 6.1.
+
+features:
+- Homepage displays product cards, all or by category
+- Cart and checkout
+- User signup, login, and authentication
+- Admin dashboard to manage categories, products (username/password protected)
+
+Tech Stack:
+- Ruby on Rails 6.1
+- HTML/ERB
+- Stripe
+- postgreSQL / Active Record
+- bcrypt/ has_secure_password
+- Sass and bootstrap
+
+Testing
+Feature testing: RSpec 
+Integration testing: Cypress
 
 ## Setup
 
